@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hng_app/link_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +16,10 @@ class HomePage extends StatelessWidget {
         actions: [
           TextButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const LinkPage()));
+              },
               child: const Text(
                 'Open Github',
                 style: TextStyle(color: Colors.white),
